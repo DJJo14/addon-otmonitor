@@ -18,7 +18,7 @@ RUN apt-get update \
 COPY rootfs /
 
 # Build arguments
-ARG BUILD_ARCH=amd64
+ARG BUILD_ARCH=armhf
 ARG BUILD_DATE
 ARG BUILD_REF
 ARG BUILD_VERSION
@@ -29,7 +29,7 @@ RUN wget https://github.com/hvxl/otmonitor/archive/master.zip && \
     unzip master.zip && mv otmonitor-master /otmonitor
 WORKDIR /otmonitor
 RUN wget -O sdx.kit https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/tclkit/sdx-20110317.kit && \
-    wget -O tclkit http://otgw.tclcode.com/download/tclkit-x64 && \
+    wget -O tclkit http://otgw.tclcode.com/download/tclkit-ahf && \
     cp tclkit runtime && \
     chmod +x tclkit
 
