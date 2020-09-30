@@ -18,7 +18,7 @@ RUN apt-get update \
 COPY rootfs /
 
 # Build arguments
-ARG BUILD_ARCH=armhf
+ARG BUILD_ARCH
 ARG BUILD_DATE
 ARG BUILD_REF
 ARG BUILD_VERSION
